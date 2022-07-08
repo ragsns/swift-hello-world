@@ -2,12 +2,12 @@ tasks:
   - name: setup
     before: |
       echo "Setting up, please wait!"
-      sudo apt update 
-      sudo apt upgrade
-      sudo apt install binutils git gnupg2 libc6-dev libcurl4 libedit2 libgcc-9-dev libpython2.7 libsqlite3-0 libstdc++-9-dev libxml2 libz3-dev pkg-config tzdata zlib1g-dev
+      sudo apt update -y
+      sudo apt upgrade -y
+      sudo apt install binutils git gnupg2 libc6-dev libcurl4 libedit2 libgcc-9-dev libpython2.7 libsqlite3-0 libstdc++-9-dev libxml2 libz3-dev pkg-config tzdata zlib1g-dev -y
       wget https://download.swift.org/swift-5.6.2-release/ubuntu2004/swift-5.6.2-RELEASE/swift-5.6.2-RELEASE-ubuntu20.04.tar.gz
       tar -xvzf swift-5.6.2-RELEASE-ubuntu20.04.tar.gz -C ~
-      echo "PATH=~/swift-5.3.3-RELEASE-ubuntu20.04/usr/bin:$PATH" >> ~/.bashrc
+      echo "PATH=~/swift-5.6.2-RELEASE-ubuntu20.04/usr/bin:$PATH" >> ~/.bashrc
       source ~/.bashrc
       swift -version
 ports:
